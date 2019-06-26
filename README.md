@@ -11,8 +11,12 @@ npm install path-combine --save
 var combine = require('path-combine');
 
 // combine returns "http://example.com/test" for all of the following cases
+
 combine('http://example.com', 'test');
+
 combine('http://example.com/', 'test');
+
 combine('http://example.com/', '/test');
+
 combine('http://example.com', '/test');
 
