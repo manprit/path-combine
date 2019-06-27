@@ -8,15 +8,12 @@ npm install path-combine --save
 
 ## Usage
 
-var combine = require('path-combine');
+    var combine = require('path-combine');
 
-// combine returns "http://example.com/test" for all of the following cases
-
-combine('http://example.com', 'test');
-
-combine('http://example.com/', 'test');
-
-combine('http://example.com/', '/test');
-
-combine('http://example.com', '/test');
+    // returns "http://example.com/test" for all of the following cases
+    
+    combine('http://example.com', 'test');
+    combine('http://example.com/', 'test');
+    combine('http://example.com/', '/test');
+    combine('http://example.com', '/test');
 

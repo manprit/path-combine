@@ -21,4 +21,9 @@ describe("combine tests", () => {
         var actual = combine('http://example.com', '/test');
         expect(actual).toBe('http://example.com/test');
     })
+
+    it('returns path1 when path2 is not defined', () => {
+        var actual = combine('http://example.com');
+        expect(actual).toBe('http://example.com');
+    })
 })
