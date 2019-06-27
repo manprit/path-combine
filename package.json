@@ -1,6 +1,6 @@
 {
   "name": "path-combine",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Combines 2 paths",
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   },
   "author": "Manprit Mann",
   "license": "ISC",
+  "keywords": ["path", "combine", "join", "url"],
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
