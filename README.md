@@ -1,10 +1,10 @@
 # path-combine
 
-Combine 2 paths
+Combine 2 url paths (~200 bytes https://bundlephobia.com/result?p=path-combine)
 
 ## Install
 
-npm install path-combine --save
+npm i path-combine --save
 
 ## Usage
 
