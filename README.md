@@ -1,6 +1,6 @@
 # path-combine
 
-Combine 2 url paths (~200 bytes https://bundlephobia.com/result?p=path-combine)
+Combine 2 url paths (no dependencies)
 
 ## Install
 
