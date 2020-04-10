@@ -16,4 +16,4 @@ function combine(path1, path2) {
     return `${path1}/${path2}`;
 }
 
-module.exports = combine;
+export default combine;

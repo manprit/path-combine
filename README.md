@@ -7,8 +7,13 @@ Combine 2 url paths (no dependencies)
 npm i path-combine --save
 
 ## Usage
+   // ES module
+    const combine = import('path-combine');
 
-    var combine = require('path-combine');
+   or 
+   
+   // common js
+    const combine = require('path-combine');
 
     // returns "http://example.com/test" for all of the following cases    
     combine('http://example.com', 'test');

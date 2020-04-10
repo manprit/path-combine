@@ -1,24 +1,37 @@
 {
   "name": "path-combine",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Combines 2 paths",
   "repository": {
     "type": "git",
     "url": "https://github.com/manprit/path-combine.git"
   },
-  "files": ["lib/index.js"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
+  "module": "lib/esm/index.js",
+  "sideEffects": false,
   "scripts": {
-    "build": "rm -rf lib && babel src --out-dir lib --presets=@babel/env",
+    "clean": "rm -rf lib",
+    "build": "npm run clean && npm run build:es && npm run build:cjs && npm run build:esm",
+    "build:es": "BABEL_ENV=es babel src --out-dir lib/es --ignore src/*.test.js",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir lib/esm --ignore src/*.test.js",
+    "build:cjs": "BABEL_ENV=cjs babel src --out-dir lib --ignore src/*.test.js", 
     "test": "jest src"
   },
   "author": "Manprit Mann",
   "license": "ISC",
-  "keywords": ["path", "combine", "join", "url"],
+  "keywords": [
+    "path",
+    "combine",
+    "join",
+    "url"
+  ],
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "jest": "^24.8.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "jest": "^25.3.0"
   }
 }

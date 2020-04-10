@@ -1,29 +1,29 @@
-var combine = require('./index');
+import combine from './index';
 
 describe("combine tests", () => {
 
     it('combines paths with no trailing slash and no leading slash', () => {
-        var actual = combine('http://example.com', 'test');
+        const actual = combine('http://example.com', 'test');
         expect(actual).toBe('http://example.com/test');
     })
 
     it('combines paths with trailing slash with no leading slash', () => {
-        var actual = combine('http://example.com/', 'test');
+        const actual = combine('http://example.com/', 'test');
         expect(actual).toBe('http://example.com/test');
     })
 
     it('combines paths with trailing slash and leading slash', () => {
-        var actual = combine('http://example.com/', '/test');
+        const actual = combine('http://example.com/', '/test');
         expect(actual).toBe('http://example.com/test');
     })
 
     it('combines paths with no trailing slash and leading slash', () => {
-        var actual = combine('http://example.com', '/test');
+        const actual = combine('http://example.com', '/test');
         expect(actual).toBe('http://example.com/test');
     })
 
     it('returns path1 when path2 is not defined', () => {
-        var actual = combine('http://example.com');
+        const actual = combine('http://example.com');
         expect(actual).toBe('http://example.com');
     })
 })
