@@ -9,13 +9,13 @@ npm i path-combine --save
 ## Usage
    ES module
    ```
-   import combine from 'path-combine'
+   import { combine } from 'path-combine'
    ```
    or 
    
    common js
    ```
-   const combine = require('path-combine');
+   const { combine } = require('path-combine');
    ```
 
    ```
